@@ -19,3 +19,16 @@ const NoteDetails = async ({ params }: Props) => {
 };
 
 export default NoteDetails;
+
+// type Props = {
+//   params: Promise<{ id: string }>;
+// };
+
+// const NoteDetails = async ({ params }: Props) => {
+//   const { id } = await params;
+//   console.log('note id:', id);
+
+//   return <><br /><div>NoteDetails: {id}</div></>;
+// };
+
+// export default NoteDetails;

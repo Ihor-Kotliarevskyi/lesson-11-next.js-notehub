@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useParams } from 'next/navigation';
 import { getSingleNote } from "@/lib/api";
 
-const NoteDetailsClient = () => {
+function NoteDetailsClient() {
 	const { id } = useParams<{ id: string }>();
 
   const { data: note, isLoading, error } = useQuery({
@@ -23,6 +23,7 @@ const NoteDetailsClient = () => {
 
   return (
     <div>
+      <br />
       <h2>{note.title}</h2>
       <p>{note.content}</p>
       <p>{formattedDate}</p>
